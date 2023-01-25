@@ -18,7 +18,8 @@
           <%= fa_icon "shopping-cart", text: 'Add' %>
         <% end %>
         <% else %>
-        <button type="button" class="btn btn-danger soldout">Sold Out</button>
+        <span><%= humanized_money_with_symbol @product.price %></span>
+        <button type="button" class="btn btn-danger soldout" >Sold Out</button>
         <% end %>          
       </div>
     </div>

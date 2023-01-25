@@ -12,7 +12,7 @@
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
-        <tr>
+        <tr class="table-secondary">
           <th colspan="2">Product</th>
           <th>Unit Price</th>
           <th>Quantity</th>
@@ -25,9 +25,9 @@
           <% end %>
       </tbody>
       <tfoot>
-        <tr>
+        <tr class="table-secondary">
           <th colspan="4">
-            TOTAL:
+            Total:
           </th>
           <th>
             <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>

@@ -7,7 +7,7 @@
     </h1>
   <% end%>
   <div>
-    <button type="button" class="btn btn-danger soldout">Sold Out</button>
+    <button type="button" id="sold" class="btn btn-danger soldout">Sold Out</button>
     <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
     method: :post do %>
       <%= fa_icon "shopping-cart", text: 'Add' %> 

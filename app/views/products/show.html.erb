@@ -19,8 +19,8 @@
         <% end %>
         <% else %>
         <div class="price-sold-out">
-          <span><%= humanized_money_with_symbol @product.price %></span>
-          <button type="button" class="btn btn-danger soldout" >Sold Out</button>
+          <span>Price: <%= humanized_money_with_symbol @product.price %></span>
+          <button type="button" class="badge bg-danger soldout" >Sold Out</button>
         <div>
         <% end %>          
       </div>

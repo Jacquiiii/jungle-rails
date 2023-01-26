@@ -4,9 +4,20 @@
 
 
 .about {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 3rem;
 
   .about-content {
     margin-top: 3em;
+    padding-right: 6em;
+    padding-left: 6em;
+  }
+
+  .plant {
+    display:flex;
+    justify-content: center;
+    margin-top: 3.5em;
   }
 }

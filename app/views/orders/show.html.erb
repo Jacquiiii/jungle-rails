@@ -2,22 +2,21 @@
 
   <header class="page-header">
     <h1>Order confirmed!</h1>
-    <h5>Your order number is: # <%= @order.id %></h1></h5>
-    <br>
+    <h5>Your order number is: <%= @order.id %></h5>
     <table class="table table-bordered">
-    <thead>
-      <tr class="table-secondary">
-        <th colspan="2">Product</th>
-        <th>Unit Price</th>
-        <th>Quantity</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @order.line_items.each do |item| %>
-        <%= render 'line_item', product: item.product, quantity: item[:quantity].to_i %>
-      <% end %>
-    </tbody>
+      <thead>
+        <tr class="table-secondary">
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.line_items.each do |item| %>
+          <%= render 'line_item', product: item.product, quantity: item[:quantity].to_i %>
+        <% end %>
+      </tbody>
       <tfoot>
         <tr class="table-secondary">
           <th colspan="4">
@@ -32,11 +31,14 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h5>Confirmation has been emailed to <%= @order.email %>.</h5>
-    <br>
-    <h4>Thank you for your order!</h6>
+    <% if @order.email == nil %>
+      <p>Please print a copy of this confirmation for your records.</p>
+      <h4>Thank you for your order!</h6>
+    <% else %>
+      <p>Confirmation has been emailed to <%= @order.email %>.</p>
+      <h4>Thank you for your order!</h6>
+    <% end %>
   </div>
-  <br>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 

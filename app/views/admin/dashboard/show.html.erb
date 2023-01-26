@@ -1,6 +1,7 @@
 <section class="admin-dashboard-show">
 
   <h1>Admin Dashboard</h1>
+
   <table class="table table-bordered">
     <thead>
       <tr class="table-secondary">
@@ -20,14 +21,11 @@
       <tr>
         <td>
           Categories
-          <br>
-          <ul>
-          <% @categories.each do |category| %>
+          <ul><% @categories.each do |category| %>
             <li>
               <a href='/categories/<%= category.id %>'><%= category.name %></a>
             </li>
-          <% end %>
-          </ul>
+          <% end %></ul>
         </td>
         <td>
           <%= @category_count %>

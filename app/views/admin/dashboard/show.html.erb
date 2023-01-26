@@ -11,7 +11,7 @@
     <tbody>
       <tr>
         <td>
-          Products
+          <a href='/admin/products'>Products</a>
         </td>
         <td>
           <%= @product_count %>
@@ -20,6 +20,14 @@
       <tr>
         <td>
           Categories
+          <br>
+          <ul>
+          <% @categories.each do |category| %>
+            <li>
+              <a href='/categories/<%= category.id %>'><%= category.name %></a>
+            </li>
+          <% end %>
+          </ul>
         </td>
         <td>
           <%= @category_count %>

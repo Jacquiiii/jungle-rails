@@ -31,7 +31,7 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <% if @order.email == nil %>
+    <% if @order.email_found? %>
       <p>Please print a copy of this confirmation for your records.</p>
       <h4>Thank you for your order!</h6>
     <% else %>

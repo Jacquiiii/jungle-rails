@@ -1,3 +1,13 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.signup {
+  padding-top: 3em;
+
+  .signup-form {
+    display: grid;
+    padding-top: 1.5em;
+    width: 60%;
+  }
+}

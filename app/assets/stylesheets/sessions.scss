@@ -1,0 +1,13 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.login {
+  padding-top: 3em;
+
+  .login-form {
+    display: grid;
+    padding-top: 1.5em;
+    width: 60%;
+  }
+}

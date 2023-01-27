@@ -8,4 +8,9 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :quantity, presence: true
   validates :category, presence: true
+
+  def in_stock?
+    quantity >= 1
+  end
+
 end

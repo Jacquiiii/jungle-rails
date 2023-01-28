@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
+      flash[:notice] = "Unable to complete registration. Please make sure all fields are filled out and the email has not been previously used."
       redirect_to '/signup'
     end
   end

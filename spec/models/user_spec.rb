@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
   describe 'Validations' do
 
     it "should save if presense of first_name, last_name, email, password is true & password and password_confirmation match" do
@@ -24,5 +25,18 @@ RSpec.describe User, type: :model do
       expect(user_2).not_to be_valid
     end
 
+    it "should save if the password has 4 or more characters" do
+      user = User.new(first_name: 'John', last_name: 'Smith', email: 'john.smith@smith.com', password: "Meow", password_confirmation: "Meow")
+      user.save
+      expect(user).to be_valid
+    end
+
+    it "should not save if the password is under 4 characters" do
+      user = User.new(first_name: 'John', last_name: 'Smith', email: 'john.smith@smith.com', password: "hey", password_confirmation: "hey")
+      user.save
+      expect(user).to_not be_valid
+    end
+
   end
+
 end

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
+  
   describe 'Validations' do
 
     it "should save if the presence of name, price, quantity and category is true" do
@@ -44,4 +45,5 @@ RSpec.describe Product, type: :model do
     end
 
   end
+  
 end

@@ -9,7 +9,10 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      flash[:notice] = "Unable to complete registration. Please make sure all fields are filled out, the password is 4 characters or longer, and the email has not been previously used."
+      # flash[:notice] = "Unable to complete registration. Please make sure all fields are filled out, the password is 4 characters or longer, and the email has not been previously used."
+      user.errors.full_messages.each do |message|
+        flash[:notice] = message
+      end
       redirect_to '/signup'
     end
   end

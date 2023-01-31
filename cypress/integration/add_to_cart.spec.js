@@ -12,8 +12,9 @@ describe("navigate from the home page to the product detail page by clicking on 
     cy.get(".products article").should("have.length", 2);
   })
 
-  it("should navigate to products/id page", () => {
-    cy.contains("Giant Tea").click()
+  it("should add to cart", () => {
+    cy.get(".products article").first().find(".btn").click({ force: true })
+    cy.get(".nav-link").contains("My Cart (1)")
   })
 
 })

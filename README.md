@@ -32,3 +32,13 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - PostgreSQL 9.x
 - Stripe
 - Cypress
+
+## Screenshots
+
+!["Screenshot of home page"](https://github.com/Jacquiiii/jungle-rails/blob/master/docs/home.png)
+!["Screenshot of about"](https://github.com/Jacquiiii/jungle-rails/blob/master/docs/about.png)
+!["Screenshot of products"](https://github.com/Jacquiiii/jungle-rails/blob/master/docs/products.png)
+!["Screenshot of product"](https://github.com/Jacquiiii/jungle-rails/blob/master/docs/product.png)
+!["Screenshot of sold out"](https://github.com/Jacquiiii/jungle-rails/blob/master/docs/sold-out.png)
+!["Screenshot of admin"](https://github.com/Jacquiiii/jungle-rails/blob/master/docs/admin.png)
+!["Screenshot of login"](https://github.com/Jacquiiii/jungle-rails/blob/master/docs/login.png)

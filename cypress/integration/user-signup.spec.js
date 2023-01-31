@@ -8,7 +8,7 @@ describe("can signup successfully", () => {
     cy.visit("/")
   })
 
-  it("finds the Signup button, clicks on it, is directed to to the Signup form", () => {
+  it("finds the Signup button, clicks on it, is directed to to the Signup form and signs up successfully", () => {
     cy.contains("Signup").click()
 
     cy.get("#user_first_name").type("James")

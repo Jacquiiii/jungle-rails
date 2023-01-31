@@ -43,53 +43,22 @@ RSpec.describe User, type: :model do
 
     user = User.create(first_name: "Jacqui", last_name: "Smith", email: "j.smith@smith.com", password: "hello", password_confirmation: "hello")
 
-    it "should validate user" do
-      expect(User.authenticate_with_credentials("j.smith@smith.com", "hello").email).to eq(user.email)
+    it "should authenticate user" do
+      expect(User.authenticate_with_credentials("j.smith@smith.com", "hello")).not_to be_nil
+    end
+
+    it "should return nil if user is not authenticated" do
+      expect(User.authenticate_with_credentials("smith@smith.com", "hello")).to eq(nil)
+    end
+
+    it "should authenticate the user if there's blank space before and after the email" do
+      expect(User.authenticate_with_credentials(" j.smith@smith.com ", "hello")).not_to be_nil
+    end
+
+    it "should authenticate the user if there's a wrong case in the email" do
+      expect(User.authenticate_with_credentials("J.smith@sMith.com", "hello")).not_to be_nil
     end
 
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# it "should return nil if password doesn't match" do
-#   @user = User.authenticate_with_credentials(user.email, '12345')
-#   expect(@user).to be_nil
-# end
-
-# it "should return nil if user doesn't exist" do
-#   @user = User.authenticate_with_credentials('rupert@r.Com', user.password)
-#   expect(@user).to be_nil
-# end
-
-# it "should authenticate the user if there's a wrong case in the email" do
-#   @user = User.authenticate_with_credentials('J.smith@smith.com', user.password)
-#   expect(@user).not_to be_nil
-# end
-
-# it "should authenticate the user if there's blank space before and after the email" do
-#   @user = User.authenticate_with_credentials(' j.smith@smith.com ', user.password)
-#   expect(@user).not_to be_nil
-# end

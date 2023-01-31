@@ -2,7 +2,9 @@
 
 Jungle is a one stop shop for plant lovers where users can purchase plants and have them delivered to their home.
 
-This mini e-commerce application was improved by Jacqui Koroll during her time at the Lighthouse Labs Web Development bootcamp. The original inherited code is found [here](https://github.com/lighthouse-labs/jungle-rails).
+This mini e-commerce application was improved by Jacqui Koroll during her time at the Lighthouse Labs Web Development bootcamp. Enhancements were made such as adding an about page, order summary, admin dashboard, and more. Bug fixes were applied such as checking out with an empty cart and missing admin security. 
+
+The original inherited code is found [here](https://github.com/lighthouse-labs/jungle-rails).
 
 ## Setup
 

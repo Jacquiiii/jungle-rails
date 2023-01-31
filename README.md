@@ -1,6 +1,8 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+Jungle is a one stop shop for plant lovers where users can purchase plants and have them delivered to their home.
+
+This mini e-commerce application was improved by Jacqui Koroll during her time at the Lighthouse Labs Web Development bootcamp. The original inherited code is found [here](https://github.com/lighthouse-labs/jungle-rails).
 
 ## Setup
 
@@ -29,3 +31,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+- Cypress

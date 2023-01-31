@@ -31,13 +31,8 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <% if @order.email_found? %>
-      <p>Please print a copy of this confirmation for your records.</p>
-      <h4>Thank you for your order!</h6>
-    <% else %>
-      <p>Confirmation has been emailed to <%= @order.email %>.</p>
-      <h4>Thank you for your order!</h6>
-    <% end %>
+    <p>Confirmation has been emailed to <%= @order.email %>.</p>
+    <h4>Thank you for your order!</h6>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>

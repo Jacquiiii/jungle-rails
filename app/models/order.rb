@@ -6,8 +6,4 @@ class Order < ApplicationRecord
 
   validates :stripe_charge_id, presence: true
 
-  def email_found?
-    email == nil
-  end
-
 end

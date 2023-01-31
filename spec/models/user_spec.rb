@@ -47,8 +47,12 @@ RSpec.describe User, type: :model do
       expect(User.authenticate_with_credentials("j.smith@smith.com", "hello")).not_to be_nil
     end
 
-    it "should return nil if user is not authenticated" do
-      expect(User.authenticate_with_credentials("smith@smith.com", "hello")).to eq(nil)
+    it "should return nil if email is incorrect" do
+      expect(User.authenticate_with_credentials("smith@smith.com", "hello")).to be_nil
+    end
+
+    it "should return false if password is incorrect" do
+      expect(User.authenticate_with_credentials("j.smith@smith.com", "apple")).to be false
     end
 
     it "should authenticate the user if there's blank space before and after the email" do

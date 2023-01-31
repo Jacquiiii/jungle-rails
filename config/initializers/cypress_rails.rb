@@ -24,7 +24,7 @@ CypressRails.hooks.before_server_start do
     price: 24.99
   })
 
-  User.create!({
+  User.create({
     first_name: 'Sally',
     last_name: 'Brown',
     email: 's.brown@brown.com',
